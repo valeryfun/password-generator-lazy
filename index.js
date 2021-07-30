@@ -1,4 +1,8 @@
 const program = require('commander')
+const chalk = require('chalk')
+const clipboardy = require('clipboardy')
+const log = console.log
+const createPassword = require('./utils/createPassword')
 
 program.version('1.0.0').description('Password generator for the lazy.')
 
@@ -11,4 +15,12 @@ program
 
 const { length, save, numbers, symbols } = program.opts()
 
-console.log(numbers, symbols)
+//Generate password
+const generatedPassword = createPassword(length, numbers, symbols)
+
+// Copy to clipboard
+clipboardy.writeSync(generatedPassword)
+
+// output generated password
+log(chalk.blue('Generated Password: ') + chalk.bold(generatedPassword))
+log(chalk.yellow('Copied to clipboard'))
