@@ -40,3 +40,10 @@ For example, to generate a password with length 15 and without symbols:
 node index.js -l 15 -ns
 ```
 ## Example of outcome
+
+![generator](https://user-images.githubusercontent.com/60170717/133631302-9a2ca557-48e5-450f-9999-cf24bdde5856.png)
+
+## Contributor(s)
+[![GitHub contributors](https://img.shields.io/github/contributors/valeryfun/password-generator-lazy)](https://github.com/valeryfun/password-generator-lazy/graphs/contributors)
+
+Feel free to contribute!
